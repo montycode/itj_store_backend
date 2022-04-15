@@ -4,15 +4,24 @@
   "description": "iTijuana Capstone Project by Omar Montoya",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js",
+    "start": "node ./src/index.js",
+    "test": "jest --forceExit",
+    "dev": "nodemon ./src/index.js",
     "lint": "eslint"
   },
   "devDependencies": {
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.5.1",
     "nodemon": "^2.0.15",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "supertest": "^6.2.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.3.0"
   }
 }
