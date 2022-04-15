@@ -1,9 +1,8 @@
 const express = require('express');
 const app = express();
-
 const mongoose = require('mongoose');
-
 const dotenv = require('dotenv');
+const authRoute = require('./routes/auth');
 
 dotenv.config();
 
@@ -14,9 +13,7 @@ mongoose
     console.log("(╯°□°）╯︵ ┻━┻", error);
 });
 
-app.get("/api/test", () => {
-    console.log("Test is successfull.")
-})
+app.use("/api/auth", authRoute);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log('Server is running.');
